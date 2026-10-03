@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #6f4e37;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Content */
+.content {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ================= RESPONSIVE PART ================= */
+
+@media (max-width: 768px) {
+
+    /* Show hamburger */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide menu by default */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #6f4e37;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Show menu when checkbox is checked */
+    #menu-toggle:checked + .menu-icon + .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 10px 0;
+    }
+}
